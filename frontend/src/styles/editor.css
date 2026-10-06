@@ -1,0 +1,215 @@
+.editor-panel {
+  min-height: 280px;
+  padding-bottom: 0.75rem;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.editor-header h3 {
+  margin: 0;
+}
+
+.editor-badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  background: var(--bg-elevated);
+}
+
+.monaco-shell {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1e1e1e;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  min-height: 320px;
+}
+
+.monaco-shell .monaco-editor,
+.monaco-shell .overflow-guard {
+  border-radius: 10px;
+}
+
+.monaco-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  color: var(--muted);
+  background: #1e1e1e;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+.code-textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #0b1220;
+  color: #d7e2f2;
+  padding: 0.85rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  outline: none;
+}
+
+.code-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.code-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.compare-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.compare-header h3 {
+  margin: 0;
+}
+
+.compare-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+}
+
+.compare-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.banner-success {
+  margin: 0 0 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border));
+  background: color-mix(in srgb, var(--success) 12%, var(--bg-panel));
+  color: var(--success);
+  font-size: 0.85rem;
+}
+
+.diff-pane h4 {
+  margin: 0 0 0.45rem;
+}
+
+.diff-code {
+  margin: 0;
+  padding: 0.45rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  overflow: auto;
+  min-height: 140px;
+  max-height: 280px;
+}
+
+.diff-line {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.55rem;
+  padding: 0.12rem 0.65rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.diff-gutter {
+  color: #667a96;
+  text-align: right;
+  user-select: none;
+}
+
+.diff-content {
+  color: #d7e2f2;
+}
+
+.diff-line-insert {
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+}
+
+.diff-line-delete {
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+}
+
+.diff-line-change {
+  background: color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.diff-insert {
+  background: color-mix(in srgb, var(--success) 45%, transparent);
+  color: #d9ffe8;
+  border-radius: 3px;
+  padding: 0 0.1rem;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--success) 55%, transparent);
+}
+
+.diff-delete {
+  background: color-mix(in srgb, var(--danger) 35%, transparent);
+  color: #ffd5d8;
+  text-decoration: line-through;
+  border-radius: 3px;
+  padding: 0 0.1rem;
+}
+
+.diff-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.7rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.diff-legend .swatch {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 3px;
+  margin-right: 0.3rem;
+  vertical-align: -1px;
+}
+
+.diff-legend .swatch.insert {
+  background: color-mix(in srgb, var(--success) 70%, #fff);
+}
+
+.diff-legend .swatch.delete {
+  background: color-mix(in srgb, var(--danger) 70%, #fff);
+}
+
+.diff-legend .swatch.change {
+  background: color-mix(in srgb, var(--warning) 70%, #fff);
+}
+
+@media (max-width: 720px) {
+  .code-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-header {
+    flex-direction: column;
+  }
+}
